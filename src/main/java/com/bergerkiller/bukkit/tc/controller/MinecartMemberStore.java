@@ -86,9 +86,7 @@ public abstract class MinecartMemberStore {
         if (!canConvert(minecart)) {
             return false; // Base logic
         }
-        if (!TCConfig.allMinecartsAreTrainCarts && !OfflineGroupManager.containsMinecart(minecart.getUniqueId())) {
-            return false; // Not a known Traincarts Minecart, and the option to auto-convert all is disabled
-        }
+        //Bukkit.getConsoleSender().sendMessage("Will convert");
         return true;
     }
 

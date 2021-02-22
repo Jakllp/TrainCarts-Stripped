@@ -272,6 +272,9 @@ public abstract class RailLogic {
      */
     public void onGravity(MinecartMember<?> member, double gravityFactorSquared) {
         CommonMinecart<?> e = member.getEntity();
+        if(e.hasPassenger()) {
+        	return;
+        }
         Block block = member.getRailTracker().getBlock();
         RailPath.Segment segment = getPath().findSegment(e.loc.vector(), block);
         if (segment == null) {

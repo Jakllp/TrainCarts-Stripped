@@ -66,7 +66,7 @@ public final class SpeedLimitProperty extends FieldBackedStandardTrainProperty.S
 
     @Override
     public double getDoubleDefault() {
-        return 0.4;
+        return 1;
     }
 
     @Override

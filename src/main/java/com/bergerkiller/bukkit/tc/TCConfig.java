@@ -164,7 +164,7 @@ public class TCConfig {
         poweredRailBoost = config.get("poweredRailBoost", 0.06);
 
         config.setHeader("maxVelocity", "\nThe maximum velocity (blocks/tick) a minecart can possibly have set");
-        maxVelocity = config.get("maxVelocity", 5.0);
+        maxVelocity = config.get("maxVelocity", 50.0);
 
         config.setHeader("slowDownMultiplier", "\nThe multiplier used to slow down minecarts");
         config.addHeader("slowDownMultiplier", "Normal is the default, slow is when the minecart is meant to slow down.");

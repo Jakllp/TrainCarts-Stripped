@@ -1506,7 +1506,7 @@ public class MinecartGroup extends MinecartGroupStore implements IPropertiesHold
                 double usf_sq = this.getProperties().getGravity() * this.getUpdateSpeedFactor() * this.getUpdateSpeedFactor();
                 for (MinecartMember<?> member : this) {
                     if (member.isUnloaded()) continue; // not loaded - no physics occur
-                    if (member.isMovementControlled()) continue; // launched by station, launcher, etc.
+                    if (member.isMovementControlled()) continue; // launched by station, launcher, etc.  - MARKED FOR REMOVAL (probably)
 
                     // Find segment of the rails path the Minecart is on
                     member.getRailLogic().onGravity(member, usf_sq);

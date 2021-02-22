@@ -39,6 +39,9 @@ public class RailLogicGround extends RailLogic {
     @Override
     public void onGravity(MinecartMember<?> member, double gravityFactorSquared) {
         CommonMinecart<?> e = member.getEntity();
+        if(e.hasPassenger()) {
+        	return;
+        }
         e.vel.y.subtract(gravityFactorSquared * getGravityMultiplier(member));
     }
 

@@ -79,6 +79,7 @@ public class RailLogicAir extends RailLogic {
             // of the Minecart without movement changes causing disruptions.
             forward.multiply(0.0);
         }
+        forward.multiply(0.0);
 
         if (forward.lengthSquared() <= 1e-8) {
             // Forward vector is useless, just use the old quaternion

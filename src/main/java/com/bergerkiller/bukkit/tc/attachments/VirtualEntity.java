@@ -322,7 +322,7 @@ public class VirtualEntity {
         liveVel = 0.0;
         if (this.entityTypeIsMinecart && this.manager instanceof MinecartMemberNetwork) {
             MinecartMember<?> member = ((MinecartMemberNetwork) manager).getMember();
-            if (!member.isUnloaded() && member.getGroup().getProperties().isSoundEnabled() && !member.isDerailed()) {
+            if (!member.isUnloaded()) {
                 if (!Double.isNaN(velSyncAbsX)) {
                     liveVel = MathUtil.distance(liveAbsX, liveAbsY, liveAbsZ, velSyncAbsX, velSyncAbsY, velSyncAbsZ);
                 }
